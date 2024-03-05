@@ -107,14 +107,19 @@ public String ID, Name, Address, Phone;
         Phone = ph;
         age = a;
     }
+
+    public void study()
+    {
+        Console.WriteLine("Studnet {0} is studying", Name);
+    }
 }
+
 class Programs
 {
-
     public static void Main(string[] args)
     {
-        student one = new student();
-        Console.WriteLine("Student {0} is studying", one.Name);
+        student std = new student("A - 0002", "Aye Aye", "Mandalay", "000002", 20);
+        std.study();
     }
 }
 
