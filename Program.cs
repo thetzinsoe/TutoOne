@@ -84,6 +84,8 @@
 //    }
 //}
 
+using System.Xml.Linq;
+
 class student
 {
 public String ID, Name, Address, Phone;
@@ -93,10 +95,10 @@ public String ID, Name, Address, Phone;
         ID = "A-00001";
         Name = "Mg Mg";
         Address = "Yangon";
-Phone = "000001";
+        Phone = "000001";
         age = 15;
         Console.WriteLine("Student Object is created");
-         }
+    }
     public student(string id, string name, string address, string ph, int a) // argument constructor
     {
         ID = id;
@@ -105,10 +107,14 @@ Phone = "000001";
         Phone = ph;
         age = a;
     }
+}
+class Programs
+{
 
-public void study()
+    public static void Main(string[] args)
     {
-        Console.WriteLine("Student {0} is studying", Name);
+        student one = new student();
+        Console.WriteLine("Student {0} is studying", one.Name);
     }
 }
 
