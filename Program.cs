@@ -84,42 +84,76 @@
 //    }
 //}
 
-using System.Xml.Linq;
 
-class student
+//class student
+//{
+//public String ID, Name, Address, Phone;
+//    public int age;
+//    public student() //default constructor
+//    {
+//        ID = "A-00001";
+//        Name = "Mg Mg";
+//        Address = "Yangon";
+//        Phone = "000001";
+//        age = 15;
+//        Console.WriteLine("Student Object is created");
+//    }
+//    public student(string id, string name, string address, string ph, int a) // argument constructor
+//    {
+//        ID = id;
+//        Name = name;
+//        Address = address;
+//        Phone = ph;
+//        age = a;
+//    }
+
+//    public void study()
+//    {
+//        Console.WriteLine("Studnet {0} is studying", Name);
+//    }
+//}
+
+//class Programs
+//{
+//    public static void Main(string[] args)
+//    {
+//        student std = new student("A - 0002", "Aye Aye", "Mandalay", "000002", 20);
+//        std.study();
+//    }
+//}
+
+class Point
 {
-public String ID, Name, Address, Phone;
-    public int age;
-    public student() //default constructor
+    public int x { get; set; }
+    public int y { get; set; }
+    public Point()
     {
-        ID = "A-00001";
-        Name = "Mg Mg";
-        Address = "Yangon";
-        Phone = "000001";
-        age = 15;
-        Console.WriteLine("Student Object is created");
-    }
-    public student(string id, string name, string address, string ph, int a) // argument constructor
-    {
-        ID = id;
-        Name = name;
-        Address = address;
-        Phone = ph;
-        age = a;
+        this.x=3; this.y=4;
     }
 
-    public void study()
+    public Point(Point p)
     {
-        Console.WriteLine("Studnet {0} is studying", Name);
+        this.x = p.x;
+        this.y = p.y;
     }
+
+    public void show()
+    {
+        Console.WriteLine("the value is {0} and {1}", x, y);
+    }
+
+  
 }
 
-class Programs
+class Test
 {
     public static void Main(string[] args)
     {
-        student std = new student("A - 0002", "Aye Aye", "Mandalay", "000002", 20);
-        std.study();
+        //Console.WriteLine("hello constructor!");
+       // Point p1 = new Point(); // default constructor
+        Point p2 = new Point(); // argument constructor
+       // Point p3 = new Point(p1); // argument constructor 
+        p2.show();
+        Console.ReadKey();
     }
 }
-
